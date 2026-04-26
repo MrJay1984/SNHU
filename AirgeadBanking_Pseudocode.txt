@@ -1,0 +1,67 @@
+AIRGEAD BANKING APP PSEUDOCODE
+
+Start program
+Create a Boolean variable named runAgain and set it to true
+
+While runAgain is true
+Create an InvestmentData object
+Display prompts for the user input values
+Get the initial investment amount from the user
+Validate that the initial investment amount is greater than 0
+Get the monthly deposit amount from the user
+Validate that the monthly deposit amount is 0 or greater
+Get the annual interest rate from the user
+Validate that the annual interest rate is greater than 0
+Get the number of years from the user
+Validate that the number of years is greater than 0
+
+Display the formatted data input screen
+Show the initial investment amount
+Show the monthly deposit amount
+Show the annual interest rate
+Show the number of years
+Prompt the user to press Enter to continue
+
+Display the first report title for no monthly deposits
+Display the column headings for year, year end balance, and year end earned interest
+Set the balance equal to the initial investment amount
+
+For each year from 1 to number of years
+Set yearlyInterest to 0
+For each month from 1 to 12
+Set depositedAmount to 0
+Set interest to (balance + depositedAmount) multiplied by ((annualInterest / 100) / 12)
+Add interest to yearlyInterest
+Add depositedAmount and interest to balance
+End inner loop
+Display the current year
+Display the year end balance
+Display the year end earned interest
+End outer loop
+
+Display the second report title for monthly deposits
+Display the column headings for year, year end balance, and year end earned interest
+Set the balance equal to the initial investment amount
+
+For each year from 1 to number of years
+Set yearlyInterest to 0
+For each month from 1 to 12
+Set depositedAmount to the monthly deposit value
+Set interest to (balance + depositedAmount) multiplied by ((annualInterest / 100) / 12)
+Add interest to yearlyInterest
+Add depositedAmount and interest to balance
+End inner loop
+Display the current year
+Display the year end balance
+Display the year end earned interest
+End outer loop
+
+Ask the user if they want to test a new set of values
+If the user enters y
+Set runAgain to true
+Else
+Set runAgain to false
+End if
+End while
+
+End program
